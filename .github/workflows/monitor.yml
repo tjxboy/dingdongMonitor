@@ -5,10 +5,10 @@ on:
     branches: [ master ]
   pull_request:
     branches: [ master ]
-#  schedule:
-#    - cron: "*/5 * * * *"
-#  watch:
-#    types: [ started ]  测试用 点击star就会运行
+  schedule:
+    - cron: "*/5 * * * *"
+  watch:
+    types: [ started ]  测试用 点击star就会运行
 
 
 jobs:
@@ -27,7 +27,7 @@ jobs:
         run: go build -o app
       - name: Test
         run: go test -v ./...
-#      - name: Run
-#        run: ./app
+      - name: Run
+        run: ./app
 
 
